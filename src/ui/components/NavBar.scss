@@ -1,0 +1,22 @@
+@use '../../scss/var';
+.nav {
+  padding: 1rem;
+  background-color: rgb(37, 37, 37);
+  color: var.$light-white;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__ul {
+    display: flex;
+    gap: 1rem;
+  }
+  &__li {
+  }
+  &__link {
+    font-weight: 600;
+    &--active {
+      color: var.$white;
+    }
+  }
+}
