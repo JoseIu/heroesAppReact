@@ -1,0 +1,143 @@
+@use './var';
+:root {
+  --shadow-color: 0deg 0% 60%;
+
+  --shadow--medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+*::before,
+*::after {
+  display: block;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* (Opcional) */
+  object-fit: cover;
+  /* (Opcional) */
+  object-position: center center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* (Opcional) Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var.$tipo-principal;
+  color: var.$black;
+  /* (Opcional) */
+  hyphens: auto;
+  /* (Opcional) */
+  font-smooth: always;
+  /* (Opcional) */
+  -webkit-font-smoothing: antialiased;
+  /* (Opcional) */
+  -moz-osx-font-smoothing: grayscale;
+}
