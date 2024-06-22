@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import { HeroesApp } from './HeroesApp.tsx';
-import './index.css';
+import './index.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <HeroesApp />
+    <BrowserRouter>
+      <HeroesApp />
+    </BrowserRouter>
   </React.StrictMode>
 );
