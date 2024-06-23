@@ -1,0 +1,36 @@
+.search {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2rem;
+  &__title {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 600;
+  }
+  &__form {
+    display: flex;
+    gap: 1rem;
+  }
+  &__input {
+    padding: 0.3rem 1rem;
+    border-radius: 0.3rem;
+    outline: 0.0625rem solid #222;
+  }
+  &__btn {
+    padding: 0.3rem 1rem;
+    border-radius: 0.3rem;
+    background-color: rgb(37, 37, 37);
+    color: white;
+  }
+  &__result {
+    width: 100%;
+  }
+  &__message {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 600;
+    &--none {
+      display: none;
+    }
+  }
+}
