@@ -30,6 +30,14 @@ export const NavBar = () => {
             DC
           </NavLink>
         </li>
+        <li className="nav__li">
+          <NavLink
+            className={({ isActive }) => `nav__link ${isActive ? 'nav__link--active' : ''}`}
+            to="/search"
+          >
+            Search
+          </NavLink>
+        </li>
       </ul>
 
       <button onClick={handleLogout}>Logout</button>
