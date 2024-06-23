@@ -1,10 +1,15 @@
+import { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth/context/AuthContext';
 import './NavBar.scss';
 
 export const NavBar = () => {
   const navigate = useNavigate();
 
+  const { authState, onLogout } = useContext(AuthContext);
+
   const handleLogout = () => {
+    onLogout();
     navigate('/login', {
       replace: true,
     });
@@ -40,7 +45,7 @@ export const NavBar = () => {
         </li>
       </ul>
 
-      <button onClick={handleLogout}>Logout</button>
+      <button onClick={handleLogout}>{authState.user.name} Logout</button>
     </nav>
   );
 };
