@@ -1,0 +1,23 @@
+.hero-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__image {
+    min-width: 20rem;
+    max-width: 30rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+}
